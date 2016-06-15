@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>login</title>
+  <style type="text/css">
+  body {
+    color: #000;
+    font: 12px/1.5 arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+  }
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #6c6c6c;
+  }
+
+  a:hover {
+    color: red;
+  }
+
+  input {
+    border: none;
+  }
+
+  button {
+    border: none;
+    background: none;
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  .header {
+    width: 960px;
+    margin: 0px auto;
+    height: 85px;
+    line-height: 85px;
+    position: relative;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .logo {
+    width: 360px;
+    height: auto;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .header_icon {
+    width: 100%;
+    height: 85px;
+    margin-left: -360px;
+  }
+
+  .list {
+    margin-left: 360px;
+    position: relative;
+  }
+
+  .right li:nth-child(3) a {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    width: 110px;
+    height: 31px;
+    background: url('img/header_corn_new_v2.png');
+    background-position: 0px -64px;
+    overflow: hidden;
+  }
+
+  .right li:nth-child(2) a {
+    position: absolute;
+    right: 150px;
+    top: 35px;
+    width: 110px;
+    height: 31px;
+    background: url('img/header_corn_new_v2.png');
+    background-position: 0px -30px;
+    overflow: hidden;
+  }
+
+  .right li:nth-child(1) a {
+    position: absolute;
+    right: 280px;
+    top: 35px;
+    width: 110px;
+    height: 31px;
+    background: url('img/header_corn_new_v2.png');
+    background-position: 0px 0px;
+    overflow: hidden;
+  }
+
+  .main {
+    width: 960px;
+    margin: 50px auto;
+    height: 500px;
+    background-image: url('img/loginPic.jpg');
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .wrap {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 356px;
+    height: 418px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .075);
+    background: rgba(255, 255, 255, .85);
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .wrap h1 {
+    color: #e31256;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+  }
+
+  .wrap h1 span {
+    float: right;
+    font-weight: 100;
+  }
+
+  .wrap h1 span:nth-child(1) {
+    color: #e31256;
+    font-size: 12px;
+  }
+
+  .wrap h1 span:nth-child(2) {
+    color: #969696;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .normal_log {
+    margin-left: 30px;
+  }
+
+  .phoned {
+    margin-top: 10px;
+    width: 270px;
+    height: 33px;
+    border: 1px solid #d9d9d9;
+    padding: 5px 8px;
+    background-image: url('img/sign.png');
+    background-repeat: no-repeat;
+    background-position: 5px 0px;
+    padding-left: 38px;
+  }
+
+  .password {
+    float: left;
+    margin-top: 10px;
+    width: 98px;
+    height: 33px;
+    border: 1px solid #d9d9d9;
+    padding: 5px 8px;
+    background-image: url('img/sign.png');
+    background-repeat: no-repeat;
+    background-position: 5px -50px;
+    padding-left: 38px;
+  }
+
+  .btn {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 158px;
+    height: 43px;
+    font-weight: 600;
+    color: #666;
+    border: 1px solid #d9d9d9;
+    padding: 5px 8px;
+    margin-left: 10px;
+    background: linear-gradient(to bottom, #fcfcfc, #f2f2f2);
+  }
+
+  .login_forget {
+    clear: both;
+  }
+
+  .login {
+    clear: both;
+    margin-top: 20px;
+  }
+
+  .btnlogin {
+    margin-top: 10px;
+    width: 310px;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0px 30px;
+    background-color: #F8296D;
+  }
+
+  .more {
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .link_1 {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    background-image: url('img/icon.jpg');
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+
+  }
+
+  .link_2 {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 63px;
+    background-image: url('img/icon.jpg');
+    background-position: -63px 0px;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+
+  }
+
+  .link_3 {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 116px;
+    background-image: url('img/icon.jpg');
+    background-position: -120px 0px;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+
+  }
+
+  .link_4 {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 169px;
+    background-image: url('img/icon.jpg');
+    background-position: -178px 0px;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+
+  }
+
+  .link_5 {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 222px;
+    background-image: url('img/icon.jpg');
+    background-position: -230px 0px;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+
+  }
+
+  .link_6 {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 272px;
+    height: 43px;
+    line-height: 43px;
+  }
+
+  .link_6 s {
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    background-image: url('img/icon.jpg');
+    background-position: -270px 0px;
+    width: 33px;
+    height: 18px;
+    overflow: hidden;
+  }
+
+  .link_6 s:hover {
+    transform: rotateX(180deg);
+
+  }
+  .hidden{
+    margin-top:50px;
+    position:relative;
+  }
+  .link_7{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    background-image: url('img/icon.jpg');
+    background-position: 0px 50px;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+
+  }
+   .link_8{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 63px;
+    background-image: url('img/icon.jpg');
+     background-position: -63px 50px;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+
+
+  }
+   .link_9 {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 116px;
+    background-image: url('img/icon.jpg');
+    background-position: -115px 50px;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+
+  }
+
+  .link_10 {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 169px;
+    background-image: url('img/icon.jpg');
+    background-position: -178px 50px;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+
+  }
+
+  .link_11 {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 222px;
+    background-image: url('img/icon.jpg');
+    background-position: -230px 50px;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+
+  }
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="left  logo">
+      <img src="img/logo_new_v1.jpg">
+    </div>
+    <div class="right header_icon">
+      <ul class="list">
+        <li>
+          <a href="#"> </a>
+        </li>
+        <li>
+          <a href="#"> </a>
+        </li>
+        <li>
+          <a href="#"> </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="main">
+    <div class="wrap">
+      <h1>登陆聚美 <span>30秒注册</span><span>还没有聚美账号？</span> </h1>
+      <form name="login_select" target="_blank" action="" method="post" class="login_select">
+        <input type="radio" checked="checked">
+        <label>手机动态密码登录</label>
+        </input>
+        <input type="radio" class="normal_log">
+        <label>普通登录</label>
+        </input>
+      </form>
+      <div class="login_detial">
+        <form>
+          <input type="text" placeholder="已注册的手机号码" class="phoned"></input>
+          <input type="text" placeholder="动态密码" class="password"></input>
+          <button class="btn">获取手机动态密码</button>
+        </form>
+      </div>
+      <div class="login_forget">
+        <form>
+          <input type="checkbox" class="login" checked="checked">
+          <label>自动登录</label>
+          </input>
+        </form>
+      </div>
+      <button class="btnlogin">登录</button>
+      <div class="more">
+        <span>你也可以使用以下账号登录</span>
+        <p>
+          <a href="#" class="link_1" title="qq"> </a>
+          <a href="#" class="link_2" title="支付宝"></a>
+          <a href="#" class="link_3" title="新浪微博"></a>
+          <a href="#" class="link_4" title="360"></a>
+          <a href="#" class="link_5" title="百度"></a>
+          <a href="#" class="link_6">更多<s></s></a>
+          <div class="hidden">
+            <a href="#" class="link_7" title="微信"></a>
+            <a href="#" class="link_8" title="人人"></a>
+            <a href="#" class="link_9" title="蘑菇街"></a>
+            <a href="#" class="link_10" title="团800"></a>
+            <a href="#" class="link_11" title="迅雷"></a>
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
