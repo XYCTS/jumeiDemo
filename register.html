@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>register</title>
+  <style type="text/css">
+  body {
+    color: #000;
+    font: 12px/1.5 arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+  }
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #6c6c6c;
+  }
+
+  a:hover {
+    color: red;
+  }
+
+  input {
+    border: none;
+  }
+
+  button {
+    border: none;
+    background: none;
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  .header {
+    width: 960px;
+    margin: 0px auto;
+    height: 85px;
+    line-height: 85px;
+    position: relative;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .logo {
+    width: 360px;
+    height: auto;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .header_icon {
+    width: 100%;
+    height: 85px;
+    margin-left: -360px;
+  }
+
+  .list {
+    margin-left: 360px;
+    position: relative;
+  }
+
+  .right li:nth-child(3) a {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    width: 110px;
+    height: 31px;
+    background: url('img/header_corn_new_v2.png');
+    background-position: 0px -64px;
+    overflow: hidden;
+  }
+
+  .right li:nth-child(2) a {
+    position: absolute;
+    right: 150px;
+    top: 35px;
+    width: 110px;
+    height: 31px;
+    background: url('img/header_corn_new_v2.png');
+    background-position: 0px -30px;
+    overflow: hidden;
+  }
+
+  .right li:nth-child(1) a {
+    position: absolute;
+    right: 280px;
+    top: 35px;
+    width: 110px;
+    height: 31px;
+    background: url('img/header_corn_new_v2.png');
+    background-position: 0px 0px;
+    overflow: hidden;
+  }
+
+  .main {
+    width: 960px;
+    margin: 50px auto;
+    height: 500px;
+    background-image: url('img/loginPic.jpg');
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .wrap {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 356px;
+    height: 418px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .075);
+    background: rgba(255, 255, 255, .85);
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .wrap h1 {
+    color: #e31256;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+  }
+
+  .wrap h1 span {
+    float: right;
+    font-weight: 100;
+  }
+
+  .wrap h1 span:nth-child(1) {
+    color: #e31256;
+    font-size: 12px;
+  }
+
+  .wrap h1 span:nth-child(2) {
+    color: #969696;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .normal_log {
+    margin-left: 30px;
+  }
+
+  .input {
+    margin-top: 20px;
+    width: 308px;
+    height: 33px;
+    border: 1px solid #d9d9d9;
+    padding: 5px 8px;
+  }
+
+  .dialog {
+    display: none;
+    margin-top: 4px;
+    color: #999;
+  }
+
+  .message {
+    float: left;
+    margin-top: 20px;
+    width: 136px;
+    height: 33px;
+    border: 1px solid #d9d9d9;
+    padding: 5px 8px;
+  }
+
+  .btn {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 158px;
+    height: 43px;
+    font-weight: 600;
+    color: #666;
+    border: 1px solid #d9d9d9;
+    padding: 5px 8px;
+    margin-left: 10px;
+    background: linear-gradient(to bottom, #fcfcfc, #f2f2f2);
+  }
+
+  .btnlogin {
+    margin-top: 20px;
+    width: 310px;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0px 30px;
+    background-color: #F8296D;
+  }
+
+  .more {
+    margin-top: 5px;
+    color: #F8296D;
+  }
+  </style>
+  <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="left  logo">
+      <img src="img/logo_new_v1.jpg">
+    </div>
+    <div class="right header_icon">
+      <ul class="list">
+        <li>
+          <a href="#"> </a>
+        </li>
+        <li>
+          <a href="#"> </a>
+        </li>
+        <li>
+          <a href="#"> </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="main">
+    <div class="wrap">
+      <h1>用户注册 <span>已有账号</span><span>在此登录</span> </h1>
+      <div class="login_detial">
+        <form>
+          <input type="text" placeholder="手机号" class="input phone"></input>
+          <p class="dialog">请输入11位手机号码</p>
+          <input type="text" placeholder="短信验证" class="message"></input>
+          <button class="btn">获取短信验证码</button>
+        </form>
+      </div>
+      <div class="login_password">
+        <form>
+          <input type="password" placeholder="密码" class="input"></input>
+          <input type="password" placeholder="重置密码" class="input"></input>
+        </form>
+      </div>
+      <button class="btnlogin">同意协议并注册</button>
+      <p class="more">《聚美优品用户协议》</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //创建一个方法来根据浏览器的版本 创建ajax对象
+  function createxhr() {
+    //如何进行方法的赛选
+    if (window.XMLHttpRequest) {
+      var xhr = new XMLHttpRequest();
+    } else {
+      var version = ["Msxml2.XMLHTTP.6.0", "Msxml2.XMLHTTP.5.0", "Msxml2.XMLHTTP.4.0", "Msxml2.XMLHTTP.3.0", "Msxml2.XMLHTTP", "Microsoft.XMLHTTP"];
+      for (var i = 0, len = version.length; i < len; i++) {
+        var xhr = new ActiveXObject(version[i]);
+        if (xhr) {
+          break;
+        }
+      }
+    }
+    //返回ajax对象
+    return xhr;
+  }
+  //dom模型
+  function $(id) {
+    return document.getElementById(id);
+  }
+  $(window).load(function() {
+    $('.phone').bind('focus', function(event) {
+      event.preventDefault();
+      $('.dialog').css('display', 'block')
+      var number=$('.phone').value;
+       var xhr = createxhr();
+        xhr.onreadystatechange = function() {
+        //判断状态
+        if (xhr.readyState == 4) {
+          var res = $('res');
+          //                      alert(res);
+          res.innerHTML = xhr.responseText;
+        }
+      }
+      xhr.open('get', './data.php?number=' + number, true);
+      xhr.send(null);
+    });
+//创建数据库连接
+    $link = mysql_connect('127.0.0.1','root','slops');
+    //选择数据库
+    mysql_select_db('test');
+    //设定客户端发送编码
+    mysql_query('set names utf8',$link);
+    //接受参数username
+    $username = $_GET['username'];
+        if(!empty($username)){
+            //sql语句查询user表中username字段
+            $sql = "select * from user where username ='$username'";
+        //  echo $sql;
+            $res = mysql_query($sql);
+            $result = mysql_num_rows($res);
+        //  var_dump($resu);die;
+            if($result>0){
+                echo "该用户已存在,请从新选择用户名！！！".$username;
+            }
+
+            else{
+                echo "恭喜你，可以注册".$username;
+            }
+        }else{
+            echo "用户名不能为空";
+        }
+    mysql_close();
+
+
+
+  });
+  </script>
+</body>
+
+</html>
