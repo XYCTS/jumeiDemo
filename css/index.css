@@ -29,6 +29,7 @@ button {
 li {
   list-style: none;
   display: inline-block;
+  float: left;
 }
 
 
@@ -64,6 +65,7 @@ li {
 .h_top_l .address {
   position: relative;
   padding-right: 28px;
+  z-index: 1;
 }
 
 .address s {
@@ -93,11 +95,13 @@ li {
 .address:hover s {
   transform: rotateX(180deg);
 }
-.beijing{
-  padding:3px 8px;
-  background-color:red;
-  color:white;
+
+.beijing {
+  padding: 3px 8px;
+  background-color: red;
+  color: white;
 }
+
 .address:hover .address_detail {
   display: block;
   position: absolute;
@@ -106,8 +110,7 @@ li {
   width: 470px;
   background-color: white;
   z-index: 9;
-
-box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 10px #ddd;
 }
 
 .address:hover .address_detail li {
@@ -155,6 +158,7 @@ box-shadow: 0 0 10px #ddd;
 .h_top_r .my {
   position: relative;
   padding-right: 20px;
+  z-index: 1;
 }
 
 .my span {
@@ -192,10 +196,12 @@ box-shadow: 0 0 10px #ddd;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  overflow: hidden;
 }
 
-.my:hover .my_content li {
+.my:hover .my_content li a {
   display: block;
+  width: 90px;
 }
 
 .line {
@@ -375,15 +381,13 @@ box-shadow: 0 0 10px #ddd;
   color: white;
   line-height: 38px;
 }
-
-.h_bottom_l .first {
-  background-color: #ed145b;
+.h_bottom_l a:hover{
+  color:#ffc;
 }
 
-.h_bottom_l a:hover {
+.h_bottom_l .selected {
   background-color: #ed145b;
 }
-
 
 /* main */
 
@@ -401,8 +405,14 @@ box-shadow: 0 0 10px #ddd;
   height: 100%;
 }
 
+.nav_wrap {
+  position: relative;
+}
+
 .nav {
-  margin-top: 20px;
+  width: 470px;
+  height:45px;
+  margin:20px auto 20px;
   text-align: center;
 }
 
@@ -411,8 +421,15 @@ box-shadow: 0 0 10px #ddd;
   width: 232px;
   height: 44px;
   line-height: 44px;
-  border: 1px solid #ddd;
-  background-color: #ddd;
+  color:#555;
+  font-size:20px;
+  border: 1px solid #555;
+
+}
+
+.nav li .actived{
+  background-color:#555;
+  color:white;
 }
 
 .list {
